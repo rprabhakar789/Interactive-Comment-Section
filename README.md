@@ -13,10 +13,6 @@ This is a solution to the [Interactive comments section challenge on Frontend Me
   - [Continued development](#continued-development)
 - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
-## Overview
-
 ### The challenge
 
 Users should be able to:
@@ -46,9 +42,9 @@ Users should be able to:
 
 ### What I learned
 
-Used and understood how to use React.useContext and maintain common state that can be accessed throughout the component hierarchy without passing the props down manually to each level.
-Learned to use `localStorage` to save the current state in the browser that persists when the browser is refreshed.
-Learned to use composition to reuse code between components.
+- Used and understood how to use React.useContext and maintain common state that can be accessed throughout the component hierarchy without passing the props down manually to each level.
+- Learned to use `localStorage` to save the current state in the browser that persists when the browser is refreshed.
+- Learned to use composition to reuse code between components.
 
 ## Author
 
