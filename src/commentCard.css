@@ -1,0 +1,64 @@
+.comment-card{
+  display: flex;
+  background-color:#FFF;
+  min-height: 4rem;
+  padding:1rem;
+  border-radius: 0.5rem;
+
+}
+.like-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(223, 19%, 93%);
+  width:6%;
+  border-radius: 0.5rem;
+}
+.like-section .plus-minus
+{
+  display: flex;
+  justify-content: center;
+  margin:0.5rem;
+  border-radius: 50%;
+}
+.like-section img{
+  transform: scale(1.25);
+}
+.like-section .plus-minus:hover{
+  cursor: pointer;
+}
+.like-section .plus-minus:active{
+  /* background-color:#FFF; */
+}
+.card-content{
+  margin-left:1rem;
+  width:94%;
+}
+.first-row{
+  display:flex;
+  justify-content: space-between;
+}
+.user-info{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.username{
+  font-weight: 600;
+  margin-left: 1rem;
+}
+.createdAt{
+  margin-left: 1rem;
+  font-weight: 400;
+}
+.replyButton{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color:hsl(238, 40%, 52%);
+  font-weight: 600;
+}
+.comment-content{
+  margin-top:1rem;
+}
