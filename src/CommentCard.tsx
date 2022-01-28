@@ -33,11 +33,11 @@ export default function CommentCard(props){
   return(
     <div className="comment-card">
         <div className="like-section">
-          <div className="plus-minus">
+          <div className="plus-minus plus">
             <img src='./images/icon-plus.svg' onClick={()=>{actions.changeScore(comment.id, comment.parentId,1)}}></img>
           </div>
-          <p>{comment.score}</p>
-          <div className="plus-minus">
+          <p className="score-count">{comment.score}</p>
+          <div className="plus-minus minus">
             <img src='./images/icon-minus.svg' onClick={()=>{actions.changeScore(comment.id, comment.parentId,-1)}}></img>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function CommentCard(props){
               <div className="username">{comment.user.username}</div>
               <div className="createdAt">{comment.createdAt}</div>
             </div>
-            <div onClick={()=>enableReply(comment.id)} className="replyButton" ><img src="./images/icon-reply.svg"></img>&nbsp;Reply</div>
+            <div onClick={()=>enableReply(comment.id)} className="replyButton" ><img src="/images/icon-reply.svg"></img>&nbsp;Reply</div>
           </div>
         <div className="comment-content">
           {comment.content}

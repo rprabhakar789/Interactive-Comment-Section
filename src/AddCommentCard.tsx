@@ -23,15 +23,14 @@ const sendButton={
 }
 export default function AddCommentCard(props){
   const {actions} = useContext(CommentContext);
-  const {user,setUser} = useContext(UserContext);
+  const {user} = useContext(UserContext);
+  const [currentUser, setUser] = useState(user)
   const [imgUrl, setImgUrl] = useState("")
   const [comment, setComment] = useState({content:""})
 
   useEffect(()=>{
-    console.log(actions)
-    console.log("img src : "+user.image.png)
-    setImgUrl(user.image.png)
-  },[])
+    setImgUrl(user.image?.png)
+  },[user])
   const handleSubmit=()=>{
     console.log(comment);
     var newComment = {
@@ -46,6 +45,12 @@ export default function AddCommentCard(props){
     setComment({content:""})
     props.addNewComment(newComment)
   }
+  if(!user)
+  {
+    return(
+      <></>
+    )
+  }
   return(
     <div className="comment-card" style={addCommentCard}>
         <div className="user-info">
@@ -53,7 +58,7 @@ export default function AddCommentCard(props){
         </div>
         <TextField
           id="outlined-multiline-flexible"
-          label={props.label}
+          label={props?.label}
           multiline
           maxRows={3}
           fullwidth="true"
